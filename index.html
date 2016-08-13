@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="singApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rota Verde</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="styles/vendor-0a8be6c833.css">
+    <link rel="stylesheet" href="styles/app-ddf2ebfd98.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body ng-controller="App" sn-demo="" ng-class="{'nav-static': app.state['nav-static'], 'login-page': $state.is('login'), 'error-page': $state.is('error')}">
+    <!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <div class="app" id="app" ui-view=""></div>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="scripts/vendor-fd4c8359b7.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
+    <script src="scripts/app-f101ef90fe.js"></script>
+</body>
+
+</html>
