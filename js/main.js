@@ -9,24 +9,17 @@ function initMap() {
 
 var markers = [];
 
-function setMarkers(){
-  var json = (function){
-    var json = null;
-    $.ajax({
-
-    })
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://172.19.5.156/hackthon_recife/_arvore.php?metodo=searchArvore",
+  "method": "GET",
+  "headers": {
+    "cache-control": "no-cache",
+    "postman-token": "5cae4e4e-8619-f682-e8bb-2b04ffbb8a44"
   }
 }
 
-for (var i = 0, length = json.length; i < length; i++){
-  var data = json[i],
-  LatLng = new google.maps.LatLng(data.lat, data.lng);
-
-  if(bounds.contains(LatLng)){
-    var marker = new google.maps.Marker({
-      position: LatLng,
-      map: map
-    });
-  }
-
-}
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
